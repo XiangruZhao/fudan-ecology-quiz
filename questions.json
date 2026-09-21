@@ -2,7 +2,7 @@
   {
     "id": "昆虫-1",
     "category": "昆虫",
-    "question": "秋日的校园，这只正在吸食花蜜的动物是？",
+    "question": "秋日的校园，这只正在吸食花蜜的动物是？(供图：翁悦)",
     "image": "images/insect-1.jpg",
     "options": ["安氏蜂鸟", "长喙天蛾", "红光熊蜂", "铜色蜂鸟"],
     "answer": 1,
@@ -58,12 +58,12 @@
   {
     "id": "昆虫-6",
     "category": "昆虫",
-    "question": "看图辨蝶蛾：以下哪一个是蝴蝶？",
+    "question": "看图辨蝶蛾：以下哪一个是蝴蝶？(供图：zxr +7 白嘉赫)",
     "options": [
-      { "text": "A", "image": "images/insect-6-a.jpg" },
-      { "text": "B", "image": "images/insect-6-b.jpg" },
-      { "text": "C", "image": "images/insect-6-c.jpg" },
-      { "text": "D", "image": "images/insect-6-d.jpg" }
+      { "text": "", "image": "images/insect-6-a.jpg" },
+      { "text": "", "image": "images/insect-6-b.jpg" },
+      { "text": "", "image": "images/insect-6-c.jpg" },
+      { "text": "", "image": "images/insect-6-d.jpg" }
     ],
     "answer": 0,
     "explanation": ""
@@ -71,12 +71,12 @@
   {
     "id": "昆虫-7",
     "category": "昆虫",
-    "question": "哪一只其实不是蜂？",
+    "question": "哪一只其实不是蜂？(供图：zxr)",
     "options": [
-      { "text": "A", "image": "images/insect-7-a.jpg" },
-      { "text": "B", "image": "images/insect-7-b.jpg" },
-      { "text": "C", "image": "images/insect-7-c.jpg" },
-      { "text": "D", "image": "images/insect-7-d.jpg" }
+      { "text": "", "image": "images/insect-7-a.jpg" },
+      { "text": "", "image": "images/insect-7-b.jpg" },
+      { "text": "", "image": "images/insect-7-c.jpg" },
+      { "text": "", "image": "images/insect-7-d.jpg" }
     ],
     "answer": 2,
     "explanation": ""
@@ -345,10 +345,10 @@
     "category": "鸟类",
     "question": "下列哪一种鸟属于猛禽？",
     "options": [
-      { "text": "A", "image": "images/bird-1-a.jpg" },
-      { "text": "B", "image": "images/bird-1-b.jpg" },
-      { "text": "C", "image": "images/bird-1-c.jpg" },
-      { "text": "D", "image": "images/bird-1-d.jpg" }
+      { "text": "", "image": "images/bird-1-a.jpg" },
+      { "text": "", "image": "images/bird-1-b.jpg" },
+      { "text": "", "image": "images/bird-1-c.jpg" },
+      { "text": "", "image": "images/bird-1-d.jpg" }
     ],
     "answer": 3,
     "explanation": ""
@@ -524,9 +524,10 @@
     "category": "兽类",
     "question": "下面哪种动物是“一丘之貉”的貉？",
     "options": [
-      { "text": "A", "image": "images/mammal-1-a.jpg" },
-      { "text": "B", "image": "images/mammal-1-b.jpg" },
-      { "text": "C", "image": "images/mammal-1-c.jpg" }
+      { "text": "", "image": "images/mammal-1-a.jpg" },
+      { "text": "", "image": "images/mammal-1-b.jpg" },
+      { "text": "", "image": "images/mammal-1-c.jpg" },
+      { "text": "", "image": "images/mammal-1-d.jpg" }
     ],
     "answer": 1,
     "explanation": ""
@@ -603,9 +604,9 @@
   {
     "id": "兽类-10",
     "category": "兽类",
-    "question": "红外相机拍到了下面这只动物，你能认出它吗？",
+    "question": "红外相机拍到了下面这只动物，你能认出它吗？(供图：校园科学家团队)",
     "image": "images/mammal-8.jpg",
-    "options": ["黄鼬", "黄喉貂", "大老鼠", "豹猫幼崽"],
+    "options": ["黄鼬", "黄喉貂", "黄色大老鼠", "豹猫幼崽"],
     "answer": 0,
     "explanation": ""
   },
