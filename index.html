@@ -16,7 +16,10 @@
 </style></head><body><div class="wrap">
 <section class="hero"><div class="eyebrow">Fudan Ecological Exploration Society</div>
 <h1>自然观察挑战</h1><p>昆虫 · 兽类 · 鸟类 · 两爬 · 植物 · 生态系统</p></section>
-<main id="app"></main><div class="footer">复旦自然生态科考社 · 百团招新</div></div>
+<main id="app"></main><div class="footer">
+  复旦自然生态科考社 · 百团招新<br>
+  题目由本社成员共同编写；未注明出处的图片来源于网络，仅供学习交流。
+</div></div>
 <script>
 let bank=[],current=[],answers=[],index=0;const letters=["A","B","C","D"];
 async function load(){bank=await fetch("questions.json").then(r=>r.json());start()}
