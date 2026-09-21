@@ -14,7 +14,7 @@
 .qimg{max-width:100%;border-radius:12px;margin:12px 0;display:block;}
 .opt img{max-height:100px;max-width:100%;display:block;margin-top:6px;border-radius:8px;}
 </style></head><body><div class="wrap">
-<section class="hero"><div class="eyebrow">FUDAN · NATURAL ECOLOGY FIELD EXPEDITION SOCIETY</div>
+<section class="hero"><div class="eyebrow">Fudan Ecological Exploration Society</div>
 <h1>自然观察挑战</h1><p>昆虫 · 兽类 · 鸟类 · 两爬 · 植物 · 生态系统</p></section>
 <main id="app"></main><div class="footer">复旦自然生态科考社 · 百团招新</div></div>
 <script>
@@ -55,12 +55,20 @@ function renderQuestion(){
 }
 function choose(i){answers[index]=i;renderQuestion()}
 function next(){if(answers[index]===null){alert("先选一个答案吧！");return}if(index<8){index++;renderQuestion()}else{renderResult()}}
+function getOptionDisplay(q, idx){
+  if(idx === null || idx === undefined) return '未选';
+  const opt = q.options[idx];
+  let text = '';
+  if (typeof opt === 'string') text = opt;
+  else if (opt && typeof opt === 'object') text = opt.text || '图片选项';
+  return letters[idx] + '. ' + text;
+}
 function renderResult(){
   let score=current.reduce((s,q,i)=>s+(answers[i]===q.answer?1:0),0);
   let prizeMsg = score >= 5 ? '<div style="color:#3f6b4b;font-weight:700;margin-top:8px;">🎉 恭喜！答对5题及以上，可以盖章拿奖品！</div>' : '';
   document.getElementById("app").innerHTML=
-  '<div class="card result"><div class="small">本次成绩</div><div class="score">'+score+' / 9</div><div>'+ (score===9?'太厉害了！全对！':score>=5?'不错！继续观察校园里的自然。':'再观察一会儿，你会发现更多有趣的细节。')+'</div>'+ prizeMsg +'<div class="review">'+
-  current.map((q,i)=>'<div class="item"><span class="tag">'+esc(q.category)+'</span><div><b>'+(i+1)+'. '+esc(q.question)+'</b></div><div class="'+(answers[i]===q.answer?'ok':'bad')+'">'+(answers[i]===q.answer?'✓ 答对了':'✕ 答错了')+'　你的答案：'+letters[answers[i]]+'　正确答案：'+letters[q.answer]+'</div>'+(q.explanation?'<div class="exp">'+esc(q.explanation)+'</div>':'')+'</div>').join("")+
+  '<div class="card result"><div class="small">本次成绩</div><div class="score">'+score+' / 9</div><div>'+ (score===9?'太厉害了！全对！':score>=5?'不错！继续观察自然，你会有更多发现':'继续观察自然，你会发现更多有趣的细节')+'</div>'+ prizeMsg +'<div class="review">'+
+  current.map((q,i)=>'<div class="item"><span class="tag">'+esc(q.category)+'</span><div><b>'+(i+1)+'. '+esc(q.question)+'</b></div><div class="'+(answers[i]===q.answer?'ok':'bad')+'">'+(answers[i]===q.answer?'✓ 答对了':'✕ 答错了')+'　你的答案：'+getOptionDisplay(q, answers[i])+'　正确答案：'+getOptionDisplay(q, q.answer)+'</div>'+(q.explanation?'<div class="exp">'+esc(q.explanation)+'</div>':'')+'</div>').join("")+
   '</div><button class="primary" onclick="start()">再来一组</button></div>'
 }
 function esc(s){return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
